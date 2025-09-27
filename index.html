@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Untuk Adek</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: pink;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    h1 {
+      color: red;
+    }
+    #buttons {
+      margin-top: 20px;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #yes {
+      background: lightgreen;
+    }
+    #no {
+      background: lightcoral;
+      position: absolute;
+    }
+    #message {
+      margin-top: 30px;
+      font-size: 22px;
+      color: darkred;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Apakah Adek sayang sama Mas? ❤</h1>
+  <div id="buttons">
+    <button id="yes">Iya</button>
+    <button id="no">Tidak</button>
+  </div>
+  <div id="message">Asiik 😍 Mas juga sayang banget sama Adekkkkk ❤❤❤</div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+    const yesBtn = document.getElementById("yes");
+    const message = document.getElementById("message");
+
+    yesBtn.addEventListener("click", () => {
+      message.style.display = "block";
+      document.getElementById("buttons").style.display = "none";
+    });
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.floor(Math.random() * (window.innerWidth - 100));
+      const y = Math.floor(Math.random() * (window.innerHeight - 50));
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+  </script>
+</body>
+</html>
